@@ -14,8 +14,12 @@ export default {
 }
 </script>
 <template>
-  <div class="card gap-3">
-    <img :src="card.card_images[0].image_url" :title="card.name" v-for="card in store.cardList">
+  <div class="card" v-for="card in store.cardList">
+    <img class="img-fluid" :src="card.card_images[0].image_url">
+    <div class="card-body p-0">
+      <h6 class="m-0">{{ card.name }}</h6>
+      <span>{{ card.type }}</span>
+    </div>
 
   </div>
 </template>
@@ -26,10 +30,29 @@ export default {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  height: 150px;
+  height: 200px;
+  width: 150px;
+  margin-bottom: 5rem;
 
-  img {
-    height: 100%;
+
+
+  .card-body {
+    background-color: orange;
+    text-align: center;
+    min-height: 70px;
+    border-radius: 0 0 7px 7px;
+
+    h6 {
+      font-size: 14px;
+      color: white;
+      padding-top: 5px;
+    }
+
+    span {
+      font-size: 12px;
+      color: rgb(255, 17, 0);
+    }
   }
+
 }
 </style>

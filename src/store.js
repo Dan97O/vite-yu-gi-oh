@@ -5,7 +5,7 @@ export const store = reactive(
   {
     cards: [],
     loading: true,
-    deckUrl: "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=55&offset=0",
+    deckUrl: "https://db.ygoprodeck.com/api/v7/cardinfo.php?num=49&offset=0",
     fetchCards(deck) {
       axios.get(deck)
         .then(response => {

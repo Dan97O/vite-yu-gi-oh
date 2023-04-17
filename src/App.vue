@@ -17,7 +17,7 @@ export default {
     }
   },
   created() {
-    store.fetchCards(store.deckUrl);
+    this.store.fetchCards(this.store.deckUrl);
   }
 
 }
