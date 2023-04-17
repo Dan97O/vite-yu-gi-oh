@@ -1,4 +1,5 @@
 <script>
+import { state } from "./state"
 import SiteHeader from './components/SiteHeader.vue'
 import SiteMain from './components/SiteMain.vue'
 
@@ -9,9 +10,12 @@ export default {
   },
   data() {
     return {
-
+      state,
     }
   },
+  created() {
+    state.fetchCards(state.deckUrl);
+  }
 
 }
 </script>
