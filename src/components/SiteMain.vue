@@ -2,7 +2,6 @@
 import { store } from "../store.js";
 import CardList from "./CardList.vue";
 import SelectFilter from "./SelectFilter.vue";
-
 export default {
   name: "SiteMain",
   components: {
@@ -15,16 +14,16 @@ export default {
     };
   },
   mounted() {
-    this.store.fetchCards(this.store.deckUrl);
-    this.store.fetchArchetypes(this.store.deckUrlArchetype);
-  },
+    store.fetchCards(store.deckUrl);
+    store.fetchArchetypes(store.deckUrlArchetype);
+  }
 }
 </script>
 
 
 <template>
   <main>
-    <SelectFilter @select_filter="store.fetchCards(store.deckUrl)" />
+    <SelectFilter />
     <div class="container pb-5">
       <div class="row">
         <div class="numCards">
@@ -39,7 +38,6 @@ export default {
     </div>
   </main>
 </template>
-
 
 <style lang="scss" scoped>
 main {

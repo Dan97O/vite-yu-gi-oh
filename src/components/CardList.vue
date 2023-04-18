@@ -20,7 +20,6 @@ export default {
       <h6 class="m-0">{{ card.name }}</h6>
       <span>{{ card.archetype }}</span>
     </div>
-
   </div>
 </template>
 

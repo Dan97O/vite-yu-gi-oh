@@ -8,12 +8,11 @@ export default {
       store,
     };
   },
-
-  computed: {
+  /* computed: {
     listFilter() {
       return store.fetchCards(store.deckUrl);
     },
-  },
+  }, */
 }
 </script>
 
@@ -21,7 +20,7 @@ export default {
 <template>
   <div class="my_container">
     <div class="search">
-      <select v-model="store.searchSelect" @change="$emit('filter-select')">
+      <select v-model="store.searchSelect" @change="store.fetchCards(store.deckUrl)">
         <option value="">Seleziona</option>
         <option v-for="archetype in store.archetypes" :value="archetype.archetype_name"> {{ archetype.archetype_name }}
         </option>
