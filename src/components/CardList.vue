@@ -36,20 +36,21 @@ export default {
 
 
   .card-body {
-    background-color: orange;
+    background-color: rgba(0, 0, 0, 0.644);
     text-align: center;
     min-height: 70px;
     border-radius: 0 0 7px 7px;
 
     h6 {
       font-size: 14px;
-      color: white;
+      color: rgb(0, 0, 0);
       padding-top: 5px;
     }
 
     span {
       font-size: 12px;
-      color: rgb(255, 17, 0);
+      color: white;
+      font-weight: 600;
     }
   }
 
