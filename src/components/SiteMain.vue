@@ -24,8 +24,13 @@ export default {
 <template>
   <main>
     <SelectFilter />
-    <div class="container py-3">
+    <div class="container pb-5">
       <div class="row">
+        <div class="numCards">
+          <span>
+            Found {{ this.store.cards.data.length }} cards
+          </span>
+        </div>
         <div class="col-12 d-flex flex-wrap gap-4 justify-content-center">
           <CardList />
         </div>
@@ -42,6 +47,15 @@ main {
   .container {
     background-color: white;
     border-radius: 10px;
+
+
+    .numCards {
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.644);
+      border-radius: 10px 10px 0 0;
+      color: white;
+      margin-bottom: 1rem;
+    }
   }
 }
 </style>

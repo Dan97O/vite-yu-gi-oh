@@ -10,7 +10,7 @@ export default {
   },
   computed: {
     listFilter() {
-      return store.cards.filter((card) => card.archetype == this.archetype);
+      return store.fetchCards(store.deckUrl);
     },
   },
 }
