@@ -13,6 +13,10 @@ export const store = reactive(
       const maxNumArchetype = "?num=49&offset=0";
       let compoundUrl = url + maxNumArchetype;
 
+      /*   if (this.searchSelect != '') {
+          url += `&archetype=${this.searchSelect}`
+        } */
+
       axios.get(compoundUrl)
         .then(response => {
           this.cards = response.data;
@@ -22,6 +26,7 @@ export const store = reactive(
         .catch(error => {
           console.error(error.message);
         })
+
     },
     fetchArchetypes(url) {
       axios

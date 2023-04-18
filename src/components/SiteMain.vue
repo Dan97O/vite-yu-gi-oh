@@ -15,6 +15,7 @@ export default {
     };
   },
   mounted() {
+    this.store.fetchCards(this.store.deckUrl);
     this.store.fetchArchetypes(this.store.deckUrlArchetype);
   },
 }
@@ -23,7 +24,7 @@ export default {
 
 <template>
   <main>
-    <SelectFilter />
+    <SelectFilter @select_filter="store.fetchCards(store.deckUrl)" />
     <div class="container pb-5">
       <div class="row">
         <div class="numCards">
@@ -43,6 +44,7 @@ export default {
 <style lang="scss" scoped>
 main {
   background-color: orange;
+  padding-bottom: 5rem;
 
   .container {
     background-color: white;
