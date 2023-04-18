@@ -6,7 +6,6 @@ export default {
   data() {
     return {
       store,
-      archetype: "",
     };
   },
   computed: {
@@ -21,11 +20,10 @@ export default {
 <template>
   <div class="my_container">
     <div class="search">
-      <select name="" id="" v-model="archetype">
+      <select v-model="store.searchSelect">
         <option value="">Seleziona</option>
         <option v-for="archetype in store.archetypes" :value="archetype.archetype_name"> {{ archetype.archetype_name }}
         </option>
-
       </select>
     </div>
   </div>
