@@ -15,10 +15,10 @@ export default {
 </script>
 <template>
   <div class="card" v-for="card in store.cardList">
-    <img class="img-fluid" :src="card.card_images[0].image_url">
+    <img class="card-img-top" :src="card.card_images[0].image_url">
     <div class="card-body p-0">
       <h6 class="m-0">{{ card.name }}</h6>
-      <span>{{ card.type }}</span>
+      <span>{{ card.archetype }}</span>
     </div>
 
   </div>
